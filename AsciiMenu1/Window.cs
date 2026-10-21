@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.Metrics;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
@@ -19,6 +20,8 @@ namespace AsciiMenu1
         public int height;
         public string name;
         public Border border;
+        public int backgroundColor = 3;
+        public int foregroundColor = 5;
 
         public List<string> contents = [];
 
@@ -30,7 +33,7 @@ namespace AsciiMenu1
         /// <param name="Y">The top of the window</param>
         /// <param name="Width">The width of the window</param>
         /// <param name="Height">The height of the window</param>
-        public Window(string Name, int X, int Y, int Width, int Height)
+        public Window(string Name, int X, int Y, int Width, int Height, int bgColor = 0, int fgColor = 7)
         {
             contents = [];
             name = Name;
@@ -39,14 +42,17 @@ namespace AsciiMenu1
             width = Width;
             height = Height;
             border = new Border();
-            for(int i = 0; i <= Height; i++)
+            this.backgroundColor = bgColor;
+            this.foregroundColor = fgColor;
+            for (int i = 0; i <= Height; i++)
             {
                 contents.Add(" ");
             }
 
         }
-        public Window(string Name, int X, int Y, int Width, int Height, string input)
+        public Window(string Name, int X, int Y, int Width, int Height, string input, int bgColor = 0, int fgColor = 7)
         {
+
             contents = [];
             name = Name;
             x = X;
@@ -54,6 +60,8 @@ namespace AsciiMenu1
             width = Width;
             height = Height;
             border = new Border();
+            this.backgroundColor = bgColor;
+            this.foregroundColor = fgColor;
             int countX = 0;
             int countY = 0;
             contents.Add("");
@@ -82,7 +90,7 @@ namespace AsciiMenu1
             }
         }
 
-        public Window(string Name, int X, int Y, int Width, int Height, List<string> Contents)
+        public Window(string Name, int X, int Y, int Width, int Height, List<string> Contents, int bgColor = 0, int fgColor = 7)
         {
             border = new Border();
             contents = [""];
@@ -91,6 +99,8 @@ namespace AsciiMenu1
             this.width = Width;
             this.height = Height;
             this.name = Name;
+            this.backgroundColor = bgColor;
+            this.foregroundColor = fgColor;
             string newString = "";
             int countX = 0;
             int countY = 0;

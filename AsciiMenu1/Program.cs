@@ -22,11 +22,11 @@ using System.Threading;
         List<Option> options = new List<Option>
             {
                 new Option("Add Error", () =>  newDisp.errors.Add("New Error\n")),
-                new Option("New Window",() => newDisp.wAdd(new Window("CreatedWindow",90,30,30,10,"A newly created window!"))),
+                new Option("New Window",() => newDisp.wAdd(new Window("CreatedWindow",90,30,30,10,"A newly created window!",2,3))),
                 new Option("Exit", () => Environment.Exit(0)),
             };
-        newDisp.wAdd(new Window("Clock", 2, 2, 80, 20, "This is a display"));
-        newDisp.wAdd(new Window("Not Clock", 50, 15, 30, 20, WriteOptions(options, options[optionsIndex])));
+        newDisp.wAdd(new Window("Clock", 2, 2, 80, 20, "This is a display",3,7));
+        newDisp.wAdd(new Window("Not Clock", 50, 15, 30, 20, WriteOptions(options, options[optionsIndex]),5,9));
         newDisp.showDisplay();
         errorCount = 0;
         

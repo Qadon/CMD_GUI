@@ -56,8 +56,12 @@ namespace AsciiMenu1
                             Console.Write(w.border.corners);
                             for (int i = 0; i <= w.height; i++)
                             {
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Gray;
                                 Console.SetCursorPosition(w.x - 1, w.y + i + 1);
                                 Console.Write(w.border.sides);
+                                Console.BackgroundColor = (ConsoleColor)w.backgroundColor;
+                                Console.ForegroundColor = (ConsoleColor)w.foregroundColor;
                                 Console.Write(w.contents[i]);
                                 (int left, int top) = Console.GetCursorPosition();
                                 while ((left < w.x + w.width - 1) && (left < width))
@@ -65,6 +69,8 @@ namespace AsciiMenu1
                                     (left, top) = Console.GetCursorPosition();
                                     Console.Write(" ");
                                 }
+                                Console.BackgroundColor = ConsoleColor.Black;
+                                Console.ForegroundColor = ConsoleColor.Gray;
                                 Console.Write(w.border.sides);
 
                             }

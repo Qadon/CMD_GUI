@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\qdonahue\\csProjects\\AsciiMenu1\\AsciiMenu1\\AsciiMenu1.csproj",
+      "projectUniqueName": "C:\\Users\\qdonahue\\Source\\Repos\\CMD_GUI\\AsciiMenu1\\AsciiMenu1.csproj",
       "projectName": "AsciiMenu1",
-      "projectPath": "C:\\Users\\qdonahue\\csProjects\\AsciiMenu1\\AsciiMenu1\\AsciiMenu1.csproj",
+      "projectPath": "C:\\Users\\qdonahue\\Source\\Repos\\CMD_GUI\\AsciiMenu1\\AsciiMenu1.csproj",
       "packagesPath": "C:\\Users\\qdonahue\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\qdonahue\\csProjects\\AsciiMenu1\\AsciiMenu1\\obj\\",
+      "outputPath": "C:\\Users\\qdonahue\\Source\\Repos\\CMD_GUI\\AsciiMenu1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
